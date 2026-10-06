@@ -1,0 +1,30 @@
+classDiagram
+class Library {
+    books[]
+    users[]
+    loans[]
+    add_book()
+    register_user()
+    create_loan()
+}
+Library o-- Book
+Library o-- Loan
+Library o-- User
+class Book {
+    str title
+    str author
+    bool state
+    mark_as_unavailable()
+    mark_as_available()
+}
+class User {
+    str name
+    str email
+}
+class Loan {
+    str start_date
+    str end_date
+    close_loan()
+}
+Loan ..> Book
+Loan ..> User
