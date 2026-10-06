@@ -1,0 +1,9 @@
+sequenceDiagram
+    participant User
+    participant Library
+    participant Book
+
+    User->>+Library: create a loan
+    Library->>+Book: mark as unavailable
+    create participant Loan
+    Library-->>User: loan created
